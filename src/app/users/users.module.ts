@@ -5,6 +5,11 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { ViewUserComponent } from './view-user/view-user.component';
+import {MatListModule} from "@angular/material/list";
+import {MatIconModule} from "@angular/material/icon";
+import {RouterModule} from "@angular/router";
+import {MatCardModule} from "@angular/material/card";
+import {MatTableModule} from "@angular/material/table";
 
 
 
@@ -14,10 +19,15 @@ import { ViewUserComponent } from './view-user/view-user.component';
     EditUserComponent,
     DeleteUserComponent,
     AddUserComponent,
-    ViewUserComponent
+    ViewUserComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatListModule,
+    MatIconModule,
+    RouterModule,
+    MatCardModule,
+    MatTableModule
   ]
 })
 export class UsersModule { }

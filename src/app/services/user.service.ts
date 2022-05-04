@@ -16,4 +16,8 @@ export class UserService {
     return this.http.get(this.dataUrl + "users");
   }
 
+  viewUsers(id: string): Observable<Object>{
+    return this.http.get(this.dataUrl + "users/" + id);
+  }
+
 }

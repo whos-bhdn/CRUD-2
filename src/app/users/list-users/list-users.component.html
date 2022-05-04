@@ -1,6 +1,19 @@
-<ul>
-  <li *ngFor="let user of listUsers">
-    {{ user.name }}
-  </li>
-</ul>
+<!--<ul>-->
+<!--  <li *ngFor="let user of listUsers">-->
+<!--    {{ user.name }}-->
+<!--  </li>-->
+<!--</ul>-->
+<mat-card *ngIf="listUsers">Displaying {{ listUsers.length }} users</mat-card>
+<mat-list>
+  <mat-list-item *ngFor="let user of listUsers">
+    <h3 matLine> {{user.name}} </h3>
+    <button [routerLink]="['update', user.id]">Edit</button>
+    <button [routerLink]="['delete', user.id]">Delete</button>
+    <button [routerLink]="['view', user.id]">View</button>
+    <p matLine>
+      <span> {{user.date}} </span>
+      <span class="demo-2"> -- {{user.name}} </span>
+    </p>
+  </mat-list-item>
+</mat-list>
 
